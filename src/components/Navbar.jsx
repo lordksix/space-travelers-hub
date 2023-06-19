@@ -11,7 +11,7 @@ const Navbar = () => (
   <nav className="navbar">
     <ul>
       {links.map((link) => (
-        <li key={nanoid}>
+        <li key={nanoid()}>
           <NavLink
             to={link.path}
             className={({ isActive }) => (isActive ? 'active' : undefined)}
