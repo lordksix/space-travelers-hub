@@ -12,7 +12,6 @@ const initialState = {
 export const getMissions = createAsyncThunk('missions/getMissions', async (thunkAPI) => {
   try {
     const response = await axios.get(APIURL);
-    console.log(response);
     return response.data;
   } catch (error) {
     return thunkAPI.rejectWithValue('Error loading');
