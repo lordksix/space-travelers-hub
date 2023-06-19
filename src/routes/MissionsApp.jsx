@@ -1,6 +1,8 @@
+import MissionShelf from 'components/MissionAPP/MissionShelf';
+
 const MissionAPP = () => (
-  <di>
-    <h1>Mission Content</h1>
-  </di>
+  <>
+    <MissionShelf />
+  </>
 );
 export default MissionAPP;
