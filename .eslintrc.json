@@ -30,6 +30,10 @@
   ],
   "ignorePatterns": [
     "dist/",
-    "build/"
+    "build/",
+    "coverage/",
+    "node_modules/",
+    ".vercel/",
+    ".github/"
   ]
 }

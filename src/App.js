@@ -4,6 +4,7 @@ import Layout from 'routes/Layout';
 import Rockets from 'routes/Rockets';
 import MissionsApp from 'routes/MissionsApp';
 import MyProfileApp from 'routes/MyProfileApp';
+import NotMatch from 'routes/NotMatch';
 
 function App() {
   return (
