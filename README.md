@@ -61,7 +61,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-You can find a live demo in [HERE](https://bookstore-react-redux-kappa.vercel.app/).
+You can find a live demo in [HERE](hhttps://space-travelers-hub-kappa.vercel.app/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -161,7 +161,7 @@ Launches the test runner in the interactive watch mode.
 
 This project is deployed using [Vercel](https://vercel.com/). 
 
-Go to [🚀 Live Demo](https://bookstore-react-redux-kappa.vercel.app/) to check it out.
+Go to [🚀 Live Demo](https://space-travelers-hub-kappa.vercel.app/) to check it out.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
