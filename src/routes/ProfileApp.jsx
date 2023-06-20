@@ -2,7 +2,7 @@ import MyMissions from 'components/ProfileAPP/MyMissions';
 import MyRockets from 'components/ProfileAPP/MyRockets';
 
 const ProfileApp = () => (
-  <main>
+  <main className="profilePage">
     <MyMissions />
     <MyRockets />
   </main>
