@@ -25,6 +25,7 @@ const rocketsSlice = createSlice({
     builder
       .addCase(fetchRockets.pending, (state) => {
         state.isLoading = true;
+        state.error = undefined;
       })
       .addCase(fetchRockets.fulfilled, (state, action) => {
         if (state.rocketItems.length === 0) {
@@ -40,6 +41,7 @@ const rocketsSlice = createSlice({
           });
         }
         state.isLoading = false;
+        state.error = undefined;
       })
       .addCase(fetchRockets.rejected, (state, action) => {
         state.error = action.payload;
