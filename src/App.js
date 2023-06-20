@@ -9,6 +9,7 @@ import ProfileApp from 'routes/ProfileApp';
 import { fetchRockets } from 'features/rockets/rocketsSlice';
 import NotMatch from 'routes/NotMatch';
 import { getMissions } from 'features/missions/missionsSlice';
+import 'styles/rocketsList.scss';
 
 function App() {
   const dispatch = useDispatch();

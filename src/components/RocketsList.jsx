@@ -5,7 +5,7 @@ import { getRockets } from 'features/rockets/rocketsSlice';
 const RocketsList = () => {
   const { rocketItems, isLoading, error } = useSelector(getRockets);
   return (
-    <ul>
+    <ul className="rockets-list">
       {isLoading ? <p>is Loading...</p> : undefined}
       {error ? <p>{error}</p> : undefined}
       {rocketItems.map((rocket) => (
