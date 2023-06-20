@@ -17,7 +17,10 @@ const RocketItem = ({ rocket }) => {
       </div>
       <div className="rocket-details-box">
         <h3>{rocket.name}</h3>
-        <p>{rocket.description}</p>
+        <p>
+          {rocket.reserved && <span className="reserved-badge">Reserved </span>}
+          {rocket.description}
+        </p>
         {rocket.reserved ? (
           <button
             type="button"
