@@ -25,7 +25,7 @@ const missionsSlice = createSlice({
     addSpecialist: (state, action) => {
       const missions = [...state.missions.map((mission) => {
         if (mission.missionId === action.payload) {
-          const reserve = !mission.isJoined;
+          const reserve = !mission.reserve;
           return {
             ...mission,
             reserve,
