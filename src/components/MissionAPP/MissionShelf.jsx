@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import { selectMission } from 'features/missions/missionsSlice';
 import { nanoid } from '@reduxjs/toolkit';
+import { Table } from 'react-bootstrap';
 
 const MissionShelf = () => {
   const { missions, isLoading, error } = useSelector(selectMission);
@@ -33,9 +34,21 @@ const MissionShelf = () => {
     </li>
   ));
   return (
-    <ul>
-      {missionArr}
-    </ul>
+    <>
+      <Table striped bordered hover>
+        <thead>
+          <tr>
+            <th>Mission</th>
+            <th>Descripction</th>
+            <th>Status</th>
+            <th> </th>
+          </tr>
+        </thead>
+      </Table>
+      <ul>
+        {missionArr}
+      </ul>
+    </>
   );
 };
 
