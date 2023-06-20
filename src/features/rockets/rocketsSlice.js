@@ -12,7 +12,7 @@ export const fetchRockets = createAsyncThunk('rockets/fetchRockets', async (_, {
 });
 
 const initialState = {
-  rocketsItems: [],
+  rocketItems: [],
   isLoading: true,
   error: undefined,
 };
@@ -27,7 +27,7 @@ const rocketsSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(fetchRockets.fulfilled, (state, action) => {
-        if (state.rocketsItems.length === 0) {
+        if (state.rocketItems.length === 0) {
           action.payload.forEach((elt) => {
             const rocket = {
               id: elt.id,
@@ -36,7 +36,7 @@ const rocketsSlice = createSlice({
               type: elt.type,
               image: elt.flickr_images[0],
             };
-            state.rocketsItems.push(rocket);
+            state.rocketItems.push(rocket);
           });
         }
         state.isLoading = false;

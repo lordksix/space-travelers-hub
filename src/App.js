@@ -1,12 +1,20 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 import Layout from 'components/Layout';
 import Rockets from 'routes/Rockets';
 import MissionsApp from 'routes/MissionsApp';
 import ProfileApp from 'routes/ProfileApp';
+import { fetchRockets } from 'features/rockets/rocketsSlice';
 import NotMatch from 'routes/NotMatch';
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchRockets());
+  }, [dispatch]);
+
   return (
     <div className="App">
       <Routes>
