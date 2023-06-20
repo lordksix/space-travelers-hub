@@ -1,19 +1,12 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import { getMissions, selectMission } from 'features/missions/missionsSlice';
+import { useSelector } from 'react-redux';
+import { selectMission } from 'features/missions/missionsSlice';
 import { nanoid } from '@reduxjs/toolkit';
 
 const MissionShelf = () => {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getMissions());
-  }, []);
-
   const { missions, isLoading, error } = useSelector(selectMission);
 
-  const nobooks = (
-    <h3 className="center">No Books Found</h3>
+  const nomissions = (
+    <h3 className="center">No Mission Found</h3>
   );
 
   if (isLoading) return <h3 className="center">Loading...</h3>;
@@ -26,7 +19,7 @@ const MissionShelf = () => {
       </h3>
     );
   }
-  if (missions.length < 1) return <>{nobooks}</>;
+  if (missions.length < 1) return <>{nomissions}</>;
   const missionArr = missions.map((mission) => (
     <li key={nanoid()}>
       mission name:
