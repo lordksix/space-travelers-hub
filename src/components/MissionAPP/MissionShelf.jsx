@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 import { selectMission } from 'features/missions/missionsSlice';
 import { nanoid } from '@reduxjs/toolkit';
 import { Table } from 'react-bootstrap';
+import styles from 'styles/MissionShelf.module.css';
 import MissionRow from './MissionRow';
 
 const MissionShelf = () => {
@@ -22,18 +23,7 @@ const MissionShelf = () => {
     );
   }
   if (missions.length < 1) return <>{nomissions}</>;
-  const missionArr = missions.map((mission) => (
-    <li key={nanoid()}>
-      mission name:
-      {mission.missionName}
-      <br />
-      mission id:
-      {mission.missionId}
-      <br />
-      description:
-      {mission.description}
-    </li>
-  ));
+
   const missionTable = missions.map((mission) => (
     <MissionRow
       key={nanoid()}
@@ -43,25 +33,23 @@ const MissionShelf = () => {
       isJoined={mission.isJoined}
     />
   ));
+
   return (
-    <>
+    <main className={styles.missionsSection}>
       <Table striped bordered hover>
         <thead>
           <tr>
-            <th>Mission</th>
-            <th>Descripction</th>
-            <th>Status</th>
-            <th> </th>
+            <th className={styles.left}>Mission</th>
+            <th className={styles.left}>Descripction</th>
+            <th className={`${styles.double} ${styles.left}`}>Status</th>
+            <th className={styles.double}> </th>
           </tr>
         </thead>
         <tbody>
           {missionTable}
         </tbody>
       </Table>
-      <ul>
-        {missionArr}
-      </ul>
-    </>
+    </main>
   );
 };
 
