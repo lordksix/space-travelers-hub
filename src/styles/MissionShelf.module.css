@@ -1,0 +1,13 @@
+.missionsSection {
+  padding: 3vh 3vw;
+}
+
+.left {
+  text-align: left;
+}
+
+@media only  screen and (min-width: 900px) {
+  .double {
+    width: 180px;
+  }
+}
