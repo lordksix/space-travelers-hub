@@ -57,6 +57,9 @@
 
 - **Setup React App**
 - **Implement SPA using React Router**
+- **Connect to SpaceX API**
+- **Implement mission join or member badgets**
+- **Display list of mission on Missions SPA**
 
 
 ## 🚀 Live Demo <a name="live-demo"></a>
