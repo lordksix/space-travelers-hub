@@ -170,6 +170,7 @@ Go to [🚀 Live Demo](https://bookstore-react-redux-kappa.vercel.app/) to check
 👤 **Author**
 
 - GitHub: [@lordksix](https://github.com/lordksix)
+- GitHub: [@momo-8*](https://github.com/momo-87)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
