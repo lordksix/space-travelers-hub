@@ -1,6 +1,6 @@
 const MissionAPP = () => (
-  <di>
+  <div>
     <h1>Mission Content</h1>
-  </di>
+  </div>
 );
 export default MissionAPP;
