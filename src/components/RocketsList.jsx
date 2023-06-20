@@ -1,8 +1,9 @@
 import { useSelector } from 'react-redux';
 import RocketItem from 'components/RocketItems';
+import { getRockets } from 'features/rockets/rocketsSlice';
 
 const RocketsList = () => {
-  const { rocketItems, isLoading, error } = useSelector((state) => state.rockets);
+  const { rocketItems, isLoading, error } = useSelector(getRockets);
   return (
     <ul>
       {isLoading ? <p>is Loading...</p> : undefined}

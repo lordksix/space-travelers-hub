@@ -49,4 +49,6 @@ const rocketsSlice = createSlice({
       });
   },
 });
+
+export const getRockets = (state) => (state.rockets);
 export default rocketsSlice.reducer;
