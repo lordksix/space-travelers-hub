@@ -5,8 +5,17 @@ import Rockets from 'routes/Rockets';
 import MissionsApp from 'routes/MissionsApp';
 import ProfileApp from 'routes/ProfileApp';
 import NotMatch from 'routes/NotMatch';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { getMissions } from 'features/missions/missionsSlice';
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getMissions());
+  }, [dispatch]);
+
   return (
     <div className="App">
       <Routes>
