@@ -1,11 +1,14 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { rocketReservation } from 'features/rockets/rocketsSlice';
+import { rocketReservation, cancelReservation } from 'features/rockets/rocketsSlice';
 
 const RocketItem = ({ rocket }) => {
   const dispatch = useDispatch();
-  const handleReserveButton = (id) => () => {
+  const handleReserveButn = (id) => () => {
     dispatch(rocketReservation(id));
+  };
+  const handleCancelReservationBtn = (id) => () => {
+    dispatch(cancelReservation(id));
   };
   return (
     <div className="rocket-box">
@@ -15,7 +18,16 @@ const RocketItem = ({ rocket }) => {
       <div className="rocket-details-box">
         <h3>{rocket.name}</h3>
         <p>{rocket.description}</p>
-        <button type="button" className="reserver-button" onClick={handleReserveButton(rocket.id)}>Reserve Rocket</button>
+        {rocket.reserved ? (
+          <button
+            type="button"
+            className="cancel-reservation-btn"
+            onClick={handleCancelReservationBtn(rocket.id)}
+          >
+            Cancel Reservation
+          </button>
+        )
+          : <button type="button" className="reservation-btn" onClick={handleReserveButn(rocket.id)}>Reserve Rocket</button>}
       </div>
     </div>
   );
@@ -29,5 +41,6 @@ RocketItem.propTypes = {
     name: PropTypes.string,
     image: PropTypes.string,
     id: PropTypes.string,
+    reserved: PropTypes.bool,
   }).isRequired,
 };
