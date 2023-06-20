@@ -30,7 +30,7 @@ const MissionShelf = () => {
       missionName={mission.missionName}
       missionId={mission.missionId}
       description={mission.description}
-      isJoined={mission.isJoined}
+      reserve={mission.reserve}
     />
   ));
 

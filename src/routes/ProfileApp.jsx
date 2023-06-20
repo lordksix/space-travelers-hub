@@ -1,4 +1,10 @@
+import MyMissions from 'components/ProfileAPP/MyMissions';
+import MyRockets from 'components/ProfileAPP/MyRockets';
+
 const ProfileApp = () => (
-  <p>There comes the profile</p>
+  <main>
+    <MyMissions />
+    <MyRockets />
+  </main>
 );
 export default ProfileApp;

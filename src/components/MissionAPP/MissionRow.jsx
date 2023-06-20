@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 
 const MissionRow = (props) => {
   const {
-    missionName, missionId, description, isJoined,
+    missionName, missionId, description, reserve,
   } = props;
   const dispatch = useDispatch();
 
@@ -15,10 +15,10 @@ const MissionRow = (props) => {
   };
 
   let memberBtn;
-  if (isJoined) memberBtn = <Button variant="primary" size="sm">Active Memeber</Button>;
+  if (reserve) memberBtn = <Button variant="primary" size="sm">Active Memeber</Button>;
   else memberBtn = <Button variant="secondary" size="sm">NOT A MEMBER</Button>;
   let joinBtn;
-  if (isJoined) joinBtn = <Button variant="outline-danger" onClick={() => handleMissionChange(missionId)}>Leave Mission</Button>;
+  if (reserve) joinBtn = <Button variant="outline-danger" onClick={() => handleMissionChange(missionId)}>Leave Mission</Button>;
   else joinBtn = <Button variant="outline-secondary" onClick={() => handleMissionChange(missionId)}>Join Mission</Button>;
   return (
     <tr>
@@ -34,7 +34,7 @@ MissionRow.propTypes = {
   missionName: PropTypes.string.isRequired,
   missionId: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  isJoined: PropTypes.bool.isRequired,
+  reserve: PropTypes.bool.isRequired,
 };
 
 export default MissionRow;
