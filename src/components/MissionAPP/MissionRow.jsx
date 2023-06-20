@@ -1,6 +1,7 @@
 import { addSpecialist } from 'features/missions/missionsSlice';
 import PropTypes from 'prop-types';
 import { Button } from 'react-bootstrap';
+import styles from 'styles/MissionRow.module.css';
 import { useDispatch } from 'react-redux';
 
 const MissionRow = (props) => {
@@ -14,8 +15,8 @@ const MissionRow = (props) => {
   };
 
   let memberBtn;
-  if (isJoined) memberBtn = <Button variant="primary">Active Memeber</Button>;
-  else memberBtn = <Button variant="secondary">NOT A MEMBER</Button>;
+  if (isJoined) memberBtn = <Button variant="primary" size="sm">Active Memeber</Button>;
+  else memberBtn = <Button variant="secondary" size="sm">NOT A MEMBER</Button>;
   let joinBtn;
   if (isJoined) joinBtn = <Button variant="outline-danger" onClick={() => handleMissionChange(missionId)}>Leave Mission</Button>;
   else joinBtn = <Button variant="outline-secondary" onClick={() => handleMissionChange(missionId)}>Join Mission</Button>;
@@ -23,8 +24,8 @@ const MissionRow = (props) => {
     <tr>
       <td>{missionName}</td>
       <td>{description}</td>
-      <td>{memberBtn}</td>
-      <td>{joinBtn}</td>
+      <td className={styles.center}>{memberBtn}</td>
+      <td className={styles.center}>{joinBtn}</td>
     </tr>
   );
 };
