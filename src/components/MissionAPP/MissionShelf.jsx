@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 import { selectMission } from 'features/missions/missionsSlice';
 import { nanoid } from '@reduxjs/toolkit';
 import { Table } from 'react-bootstrap';
+import MissionRow from './MissionRow';
 
 const MissionShelf = () => {
   const { missions, isLoading, error } = useSelector(selectMission);
@@ -33,6 +34,15 @@ const MissionShelf = () => {
       {mission.description}
     </li>
   ));
+  const missionTable = missions.map((mission) => (
+    <MissionRow
+      key={nanoid()}
+      missionName={mission.missionName}
+      missionId={mission.missionId}
+      description={mission.description}
+      isJoined={mission.isJoined}
+    />
+  ));
   return (
     <>
       <Table striped bordered hover>
@@ -44,6 +54,9 @@ const MissionShelf = () => {
             <th> </th>
           </tr>
         </thead>
+        <tbody>
+          {missionTable}
+        </tbody>
       </Table>
       <ul>
         {missionArr}
