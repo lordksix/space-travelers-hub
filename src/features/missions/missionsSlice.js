@@ -22,8 +22,23 @@ const missionsSlice = createSlice({
   name: 'missions',
   initialState,
   reducers: {
-    addSpecialist: (state) => {
-      const missions =
+    addSpecialist: (state, action) => {
+      const missions = [...state.missions.map((mission) => {
+        if (mission.missionId === action.payload) {
+          const isJoined = !mission.isJoined;
+          return {
+            ...mission,
+            isJoined,
+          };
+        }
+        return {
+          ...mission,
+        };
+      })];
+      return {
+        ...state,
+        missions,
+      };
     },
   },
   extraReducers: (builder) => {
