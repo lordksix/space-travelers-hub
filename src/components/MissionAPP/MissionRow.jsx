@@ -14,18 +14,16 @@ const MissionRow = (props) => {
     dispatch(addSpecialist(id));
   };
 
-  let memberBtn;
-  if (reserve) memberBtn = <Button variant="primary" size="sm">Active Memeber</Button>;
-  else memberBtn = <Button variant="secondary" size="sm">NOT A MEMBER</Button>;
-  let joinBtn;
-  if (reserve) joinBtn = <Button variant="outline-danger" onClick={() => handleMissionChange(missionId)}>Leave Mission</Button>;
-  else joinBtn = <Button variant="outline-secondary" onClick={() => handleMissionChange(missionId)}>Join Mission</Button>;
+  const memberBtn = <Button variant="primary" size="sm">Active Memeber</Button>;
+  const nonMemberBtn = <Button variant="secondary" size="sm">NOT A MEMBER</Button>;
+  const joinBtn = <Button variant="outline-danger" onClick={() => handleMissionChange(missionId)}>Leave Mission</Button>;
+  const leaveBtn = <Button variant="outline-secondary" onClick={() => handleMissionChange(missionId)}>Join Mission</Button>;
   return (
     <tr>
       <td>{missionName}</td>
       <td>{description}</td>
-      <td className={styles.center}>{memberBtn}</td>
-      <td className={styles.center}>{joinBtn}</td>
+      <td className={styles.center}>{reserve ? memberBtn : nonMemberBtn}</td>
+      <td className={styles.center}>{reserve ? joinBtn : leaveBtn}</td>
     </tr>
   );
 };
