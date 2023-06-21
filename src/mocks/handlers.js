@@ -5,9 +5,15 @@ const mission1 = { mission_id: 'missionid1', mission_name: 'missionname1', descr
 const mission2 = { mission_id: 'missionid2', mission_name: 'missionname2', description: 'missiondescription2' };
 const mission3 = { mission_id: 'missionid3', mission_name: 'missionname3', description: 'missiondescription3' };
 
-const rocket1 = { mission_id: 'missionid1', mission_name: 'missionname1', description: 'missiondescription1' };
-const rocket2 = { mission_id: 'missionid2', mission_name: 'missionname2', description: 'missiondescription2' };
-const rocket3 = { mission_id: 'missionid3', mission_name: 'missionname3', description: 'missiondescription3' };
+const rocket1 = {
+  id: 'missionid1', name: 'missionname1', description: 'missiondescription1', type: 'rocket', flickr_images: ['img'],
+};
+const rocket2 = {
+  id: 'missionid2', name: 'missionname2', description: 'missiondescription2', type: 'rocket', flickr_images: ['img'],
+};
+const rocket3 = {
+  id: 'missionid3', name: 'missionname3', description: 'missiondescription3', type: 'rocket', flickr_images: ['img'],
+};
 
 const dataMissions = [mission1, mission2, mission3];
 const dataRockets = [rocket1, rocket2, rocket3];
