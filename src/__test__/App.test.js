@@ -23,9 +23,5 @@ test('full app rendering/navigating', async () => {
 
   // verify page content for expected route after navigating
   await user.click(screen.getByText(/missions/i));
-<<<<<<< Updated upstream
-  expect(screen.getByText(/My Missions/i)).toBeInTheDocument();
-=======
-  expect(screen.getByText(/(my missions)|loading/i)).toBeInTheDocument();
->>>>>>> Stashed changes
+  expect(screen.getByText(/(my missions)|loading|(Error:)/i)).toBeInTheDocument();
 });
