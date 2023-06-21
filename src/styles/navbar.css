@@ -1,4 +1,4 @@
-@media only screen and (min-width:768px) {
+@media only screen and (min-width: 768px) {
   header {
     display: flex;
     justify-content: center;
@@ -36,24 +36,21 @@
 
   ul.nav-list li:nth-child(3) {
     border-left: 2px solid rgba(0, 0, 0, 0.5);
-
   }
 
   ul.nav-list li a {
     text-decoration: none;
-    color: #007bff
+    color: #007bff;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  ul.nav-list {
+    width: 20%;
   }
 
-}
-
-@media only screen and (min-width:1024px) {
-
-ul.nav-list {
-  width: 20%;
-}
-
-ul.nav-list li {
-  width: 33%;
-  text-align: center;
-}
+  ul.nav-list li {
+    width: 33%;
+    text-align: center;
+  }
 }
