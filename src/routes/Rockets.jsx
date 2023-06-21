@@ -1,8 +1,8 @@
 import RocketsList from 'components/RocketsList';
 
 const Rockets = () => (
-  <div>
+  <section className="rockets">
     <RocketsList />
-  </div>
+  </section>
 );
 export default Rockets;
