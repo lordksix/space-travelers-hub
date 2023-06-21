@@ -7,7 +7,7 @@ const MyMissions = () => {
   const { missions } = useSelector(selectMission);
   const missionReserved = [...missions.filter((mission) => mission.reserve === true)]
     .map((mission) => (
-      <tr key={nanoid()}><td>{mission.missionName}</td></tr>
+      <tr key={nanoid()}><td className="left">{mission.missionName}</td></tr>
     ));
   const nomissions = (
     <p className="center">No Mission Found</p>
