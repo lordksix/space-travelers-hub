@@ -23,16 +23,16 @@ const dragonsSlice = createSlice({
   initialState,
   reducers: {
     toggleReservation: (state, action) => {
-      const dragons = [...state.dragons.map((mission) => {
-        if (mission.missionId === action.payload) {
-          const reserve = !mission.reserve;
+      const dragons = [...state.dragons.map((dragon) => {
+        if (dragon.id === action.payload) {
+          const reserve = !dragon.reserve;
           return {
-            ...mission,
+            ...dragon,
             reserve,
           };
         }
         return {
-          ...mission,
+          ...dragon,
         };
       })];
       return {
