@@ -109,7 +109,7 @@ ul.nav-list li a {
     align-items: center;
   }
 
-  ul.nav-list li:nth-child(3) {
+  ul.nav-list li:last-child {
     border-left: 2px solid rgba(0, 0, 0, 0.5);
     height: 20px;
   }

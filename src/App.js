@@ -10,6 +10,8 @@ import { fetchRockets } from 'features/rockets/rocketsSlice';
 import NotMatch from 'routes/NotMatch';
 import { getMissions } from 'features/missions/missionsSlice';
 import 'styles/rocketsList.scss';
+import { getDragons } from 'features/dragons/dragonsSlice';
+import DragonAPP from 'routes/DragonApp';
 
 function App() {
   const dispatch = useDispatch();
@@ -17,6 +19,7 @@ function App() {
   useEffect(() => {
     dispatch(getMissions());
     dispatch(fetchRockets());
+    dispatch(getDragons());
   }, [dispatch]);
 
   return (
@@ -25,6 +28,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Rockets />} />
           <Route path="missions" element={<MissionsApp />} />
+          <Route path="dragons" element={<DragonAPP />} />
           <Route path="profile" element={<ProfileApp />} />
           <Route path="*" element={<NotMatch />} />
         </Route>

@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import RocketItem from 'components/RocketItems';
+import RocketItem from 'components/RocketAPP/RocketItems';
 import { getRockets } from 'features/rockets/rocketsSlice';
 
 const RocketsList = () => {

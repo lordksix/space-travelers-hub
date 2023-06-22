@@ -1,4 +1,4 @@
-import RocketsList from 'components/RocketsList';
+import RocketsList from 'components/RocketAPP/RocketsList';
 
 const Rockets = () => (
   <section className="rockets">
