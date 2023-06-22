@@ -7,7 +7,7 @@ const MyDragons = () => {
   const { dragons } = useSelector(selectDragons);
   const dragonReserved = [...dragons.filter((dragon) => dragon.reserve === true)]
     .map((dragon) => (
-      <tr key={nanoid()}><td className="left">{dragon.namee}</td></tr>
+      <tr key={nanoid()}><td className="left">{dragon.name}</td></tr>
     ));
   const nodragons = (
     <p className="center">No Dragon Found</p>
