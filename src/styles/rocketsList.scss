@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+section.rockets {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+
+  ul.rockets-list {
+    margin-top: 10px;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+    padding: 0;
+
+    div.rocket-box {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+      padding-bottom: 10px;
+
+      div.image-box {
+        width: 95%;
+
+        img {
+          width: 100%;
+          aspect-ratio: 1/1;
+        }
+      }
+
+      div.rocket-details-box {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        h3 {
+          font-weight: bold;
+          font-size: 1.2rem;
+        }
+
+        p {
+          font-size: 0.9rem;
+        }
+
+        span.reserved-badge {
+          background-color: #18a2b8;
+          color: #fff;
+          width: 15%;
+          border-radius: 4px;
+          margin-right: 2%;
+        }
+
+        button {
+          width: 140px !important;
+          height: 4vh;
+          border-radius: 3px;
+          border: none;
+        }
+
+        button.reservation-btn {
+          background-color: #007bff;
+          color: white;
+        }
+
+        button.cancel-reservation-btn {
+          background-color: white;
+          color: gray;
+          box-shadow: 1px 1px 1px gray;
+          border: 1px solid gray;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  section.rockets {
+    text-align: left;
+
+    ul.rockets-list {
+      width: 90%;
+      border-top: 1px solid rgba($color: #000, $alpha: 0.1);
+      gap: 3vh;
+      padding-top: 2vh;
+
+      div.rocket-box {
+        width: 95%;
+        display: flex;
+        flex-direction: row;
+        gap: 1.5%;
+        box-shadow: none;
+
+        div.image-box {
+          width: 20%;
+
+          img {
+            width: 100%;
+            aspect-ratio: 1/1;
+          }
+        }
+
+        div.rocket-details-box {
+          width: 78.5%;
+          display: flex;
+          flex-direction: column;
+          gap: 1vh;
+
+          span.reserved-badge {
+            background-color: #18a2b8;
+            color: #fff;
+            width: 15%;
+            border-radius: 4px;
+            margin-right: 2%;
+          }
+
+          button {
+            width: 140px !important;
+            height: 4vh;
+            border-radius: 3px;
+            border: none;
+          }
+
+          button.reservation-btn {
+            background-color: #007bff;
+            color: white;
+          }
+
+          button.cancel-reservation-btn {
+            background-color: white;
+            color: gray;
+            box-shadow: 1px 1px 1px gray;
+            border: 1px solid gray;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.title {
+  font-size: 1.2rem;
+}
+
+.rocketsList {
+  list-style: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.noRocketFound {
+  text-align: center;
+}
+
+.rocketItem {
+  width: 90%;
+  height: 45px;
+  padding-left: 5%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
