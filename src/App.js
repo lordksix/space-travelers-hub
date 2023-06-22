@@ -10,6 +10,7 @@ import { fetchRockets } from 'features/rockets/rocketsSlice';
 import NotMatch from 'routes/NotMatch';
 import { getMissions } from 'features/missions/missionsSlice';
 import 'styles/rocketsList.scss';
+import { getDragons } from 'features/dragons/dragonsSlice';
 
 function App() {
   const dispatch = useDispatch();
@@ -17,6 +18,7 @@ function App() {
   useEffect(() => {
     dispatch(getMissions());
     dispatch(fetchRockets());
+    dispatch(getDragons());
   }, [dispatch]);
 
   return (
