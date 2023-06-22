@@ -67,6 +67,10 @@ ul.nav-list li a {
   font-weight: bold;
 }
 
+.active {
+  border-bottom: 1px solid #007bff;
+}
+
 @media only screen and (min-width: 768px) {
   nav {
     width: 90%;
