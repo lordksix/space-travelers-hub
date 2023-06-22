@@ -1,8 +1,8 @@
-import RocketsList from 'components/RocketAPP/RocketsList';
+import DragonList from 'components/DragonAPP/DragonsList';
 
 const DragonAPP = () => (
   <section className="rockets">
-    <RocketsList />
+    <DragonList />
   </section>
 );
 export default DragonAPP;
