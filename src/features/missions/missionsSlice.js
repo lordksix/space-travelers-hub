@@ -22,7 +22,7 @@ const missionsSlice = createSlice({
   name: 'missions',
   initialState,
   reducers: {
-    addSpecialist: (state, action) => {
+    toggleReservation: (state, action) => {
       const missions = [...state.missions.map((mission) => {
         if (mission.missionId === action.payload) {
           const reserve = !mission.reserve;
@@ -77,7 +77,7 @@ const missionsSlice = createSlice({
 });
 
 export const {
-  addSpecialist,
+  toggleReservation,
 } = missionsSlice.actions;
 
 export const selectMission = (state) => state.missions;
