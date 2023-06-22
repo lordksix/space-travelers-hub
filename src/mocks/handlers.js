@@ -15,8 +15,19 @@ const rocket3 = {
   id: 'missionid3', name: 'missionname3', description: 'missiondescription3', type: 'rocket', flickr_images: ['img'],
 };
 
+const dragon1 = {
+  id: 'missionid1', name: 'missionname1', description: 'missiondescription1', type: 'rocket', flickr_images: ['img'],
+};
+const dragon2 = {
+  id: 'missionid2', name: 'missionname2', description: 'missiondescription2', type: 'rocket', flickr_images: ['img'],
+};
+const dragon3 = {
+  id: 'missionid3', name: 'missionname3', description: 'missiondescription3', type: 'rocket', flickr_images: ['img'],
+};
+
 const dataMissions = [mission1, mission2, mission3];
 const dataRockets = [rocket1, rocket2, rocket3];
+const dataDragons = [dragon1, dragon2, dragon3];
 
 const handlersMissions = rest.get('https://api.spacexdata.com/v3/missions', (req, res, ctx) => res(
   ctx.json(dataMissions),
@@ -26,4 +37,8 @@ const handlersRockets = rest.get('https://api.spacexdata.com/v4/rockets', (req, 
   ctx.json(dataRockets),
 ));
 
-export { handlersMissions, handlersRockets };
+const handlersDragons = rest.get('https://api.spacexdata.com/v4/dragons', (req, res, ctx) => res(
+  ctx.json(dataDragons),
+));
+
+export { handlersMissions, handlersRockets, handlersDragons };
