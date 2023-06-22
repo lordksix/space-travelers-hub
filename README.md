@@ -180,8 +180,6 @@ Go to [🚀 Live Demo](https://space-travelers-hub-kappa.vercel.app/) to check i
 ## 🔭 Future Features <a name="future-features"></a>
 
 Future changes:
-- Implement Rockets page
-- Implement Missions page
 - Implement Dragons page
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
