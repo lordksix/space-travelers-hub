@@ -8,6 +8,7 @@ import { useState } from 'react';
 const links = [
   { path: '/', text: 'Rockets' },
   { path: 'missions', text: 'Missions' },
+  { path: 'dragons', text: 'Dragons' },
   { path: 'profile', text: 'My Profile' },
 ];
 
