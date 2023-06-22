@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import store from 'features/store';
-import RocketItem from 'components/RocketItems';
+import RocketItem from 'components/RocketAPP/RocketItems';
 
 // eslint-disable-next-line react/prop-types
 const AllTheProviders = ({ children }) => (
