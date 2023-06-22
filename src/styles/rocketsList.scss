@@ -4,7 +4,6 @@
   margin: 0;
 }
 
-@media only screen and (min-width: 320px) {
   section.rockets {
     width: 100%;
     display: flex;
@@ -84,7 +83,6 @@
       }
     }
   }
-}
 
 @media only screen and (min-width: 768px) {
   section.rockets {
