@@ -7,7 +7,7 @@ const MyProfile = () => {
   const bookedRockets = [...rocketItems.filter((rocket) => (rocket.reserved === true))];
   return (
     <div>
-      <h1 className={styles.title}>My Rockets</h1>
+      <h2>My Rockets</h2>
       <ul className={styles.rocketsList}>
         {bookedRockets.length === 0 ? <p className={styles.noRocketFound}>Rockets Not Found</p>
           : bookedRockets.map((rocket) => (
