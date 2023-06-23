@@ -1,4 +1,4 @@
-import { addSpecialist } from 'features/missions/missionsSlice';
+import { toggleReservation } from 'features/missions/missionsSlice';
 import PropTypes from 'prop-types';
 import { Button } from 'react-bootstrap';
 import styles from 'styles/MissionRow.module.css';
@@ -11,7 +11,7 @@ const MissionRow = (props) => {
   const dispatch = useDispatch();
 
   const handleMissionChange = (id) => {
-    dispatch(addSpecialist(id));
+    dispatch(toggleReservation(id));
   };
 
   const memberBtn = <Button variant="primary" size="sm">Active Memeber</Button>;

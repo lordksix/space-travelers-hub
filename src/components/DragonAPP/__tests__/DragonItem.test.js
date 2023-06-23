@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import store from 'features/store';
-import RocketItem from 'components/RocketItems';
+import DragonItem from '../DragonItems';
 
 // eslint-disable-next-line react/prop-types
 const AllTheProviders = ({ children }) => (
@@ -10,7 +10,7 @@ const AllTheProviders = ({ children }) => (
   </Provider>
 );
 
-const rocketObj = {
+const dragonObj = {
   name: 'rocket1',
   image: 'image',
   description: 'description',
@@ -19,8 +19,8 @@ const rocketObj = {
 };
 
 test('should render MissionsRow component', async () => {
-  render(<RocketItem
-    rocket={rocketObj}
+  render(<DragonItem
+    dragon={dragonObj}
   />, { wrapper: AllTheProviders });
   expect(screen.getAllByText(/reserve/i).length).toBe(1);
 });

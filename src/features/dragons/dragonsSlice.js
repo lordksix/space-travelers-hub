@@ -1,15 +1,15 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const APIURL = 'https://api.spacexdata.com/v3/missions';
+const APIURL = 'https://api.spacexdata.com/v4/dragons';
 
 const initialState = {
-  missions: [],
+  dragons: [],
   isLoading: false,
   error: undefined,
 };
 
-export const getMissions = createAsyncThunk('missions/getMissions', async (thunkAPI) => {
+export const getDragons = createAsyncThunk('dragons/getDragons', async (thunkAPI) => {
   try {
     const response = await axios.get(APIURL);
     return response.data;
@@ -18,59 +18,61 @@ export const getMissions = createAsyncThunk('missions/getMissions', async (thunk
   }
 });
 
-const missionsSlice = createSlice({
-  name: 'missions',
+const dragonsSlice = createSlice({
+  name: 'dragons',
   initialState,
   reducers: {
     toggleReservation: (state, action) => {
-      const missions = [...state.missions.map((mission) => {
-        if (mission.missionId === action.payload) {
-          const reserve = !mission.reserve;
+      const dragons = [...state.dragons.map((dragon) => {
+        if (dragon.id === action.payload) {
+          const reserve = !dragon.reserve;
           return {
-            ...mission,
+            ...dragon,
             reserve,
           };
         }
         return {
-          ...mission,
+          ...dragon,
         };
       })];
       return {
         ...state,
-        missions,
+        dragons,
       };
     },
   },
   extraReducers: (builder) => {
     builder
-      .addCase(getMissions.pending, (state) => ({
+      .addCase(getDragons.pending, (state) => ({
         ...state,
         isLoading: true,
         error: undefined,
       }))
-      .addCase(getMissions.rejected, (state, action) => ({
+      .addCase(getDragons.rejected, (state, action) => ({
         ...state,
         isLoading: false,
         error: action.payload,
       }))
-      .addCase(getMissions.fulfilled, (state, action) => {
-        const missions = action.payload.map((load) => {
-          const missionId = load.mission_id;
-          const missionName = load.mission_name;
-          const { description } = load;
+      .addCase(getDragons.fulfilled, (state, action) => {
+        const dragons = action.payload.map((load) => {
+          const {
+            description, type, id, name,
+          } = load;
           const reserve = false;
           return {
             reserve,
-            missionId,
-            missionName,
+            id,
+            name,
             description,
+            type,
+            image: load.flickr_images[0],
           };
         });
         return {
           ...state,
           isLoading: false,
           error: undefined,
-          missions,
+          dragons,
         };
       });
   },
@@ -78,8 +80,8 @@ const missionsSlice = createSlice({
 
 export const {
   toggleReservation,
-} = missionsSlice.actions;
+} = dragonsSlice.actions;
 
-export const selectMission = (state) => state.missions;
+export const selectDragons = (state) => state.dragons;
 
-export default missionsSlice.reducer;
+export default dragonsSlice.reducer;

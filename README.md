@@ -58,8 +58,8 @@
 - **Setup React App**
 - **Implement SPA using React Router**
 - **Connect to SpaceX API**
-- **Implement mission join or member badgets**
-- **Display list of mission on Missions SPA**
+- **Implement mission, profile, dragons and rocket pages**
+- **Add reserve or join to all option**
 
 
 ## 🚀 Live Demo <a name="live-demo"></a>
@@ -180,9 +180,7 @@ Go to [🚀 Live Demo](https://space-travelers-hub-kappa.vercel.app/) to check i
 ## 🔭 Future Features <a name="future-features"></a>
 
 Future changes:
-- Implement Rockets page
-- Implement Missions page
-- Implement Dragons page
+- Add extra interactivity in profile page.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
