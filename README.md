@@ -2,7 +2,9 @@
 
 <div align="center">
   <h3><b>Space Traveler's Hub</b></h3>
-
+</div>
+<div align="center">
+  <img src="./src/images/space.png" alt="screenshot"/>
 </div>
 
 
